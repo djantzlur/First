@@ -7,7 +7,7 @@ jobs:
     # You need to use the INSTALLATION_NAME from the previous step
     runs-on: githubrunnerset
     steps:
-      - name: Check runner context
+      - name: Context
         run: |
           echo "Runner name: $RUNNER_NAME"
           echo "Runner OS: $RUNNER_OS"
@@ -18,11 +18,16 @@ jobs:
           echo "Disk usage:"
           df -h
 
-      - name: Run basic command
-        run: echo "✅ Hello from your self-hosted runner!"
+      - name: Basic
+        run: echo "Hello from your self-hosted runner!"
 
-      - name: List files
-        run: ls -la
+      - name: File
+        run: |
+          echo 'hello world!' > test.txt
+          ls -l
+          cat test.txt
 
-      - name: Print environment variables
-        run: env | sort
+      - name: Envar
+        run: |
+          export TEST_ENV=hello
+          env | grep TEST_ENV
