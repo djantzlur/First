@@ -7,7 +7,22 @@ jobs:
     # You need to use the INSTALLATION_NAME from the previous step
     runs-on: githubrunnerset
     steps:
-    - run: echo "🎉 This job uses runner scale set runners!"
-    - run: sleep 30
-    - run: echo "DUSTIN TEST 123"
-    - run: sleep 30
+      - name: Check runner context
+        run: |
+          echo "Runner name: $RUNNER_NAME"
+          echo "Runner OS: $RUNNER_OS"
+          echo "Runner arch: $RUNNER_ARCH"
+          echo "Job is running on: $(hostname)"
+          echo "Current user: $(whoami)"
+          echo "Working dir: $(pwd)"
+          echo "Disk usage:"
+          df -h
+
+      - name: Run basic command
+        run: echo "✅ Hello from your self-hosted runner!"
+
+      - name: List files
+        run: ls -la
+
+      - name: Print environment variables
+        run: env | sort
