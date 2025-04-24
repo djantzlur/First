@@ -24,7 +24,7 @@ jobs:
       - name: File
         run: |
           echo 'hello world!' > test.txt
-          ls -l
+          ls
           cat test.txt
 
       - name: Envar
