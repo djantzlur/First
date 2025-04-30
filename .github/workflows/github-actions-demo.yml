@@ -31,3 +31,9 @@ jobs:
         run: |
           export TEST_ENV=hello
           env | grep TEST_ENV
+
+      - name: FIPS
+        run: |
+          echo 'FIPS test'
+          cat /proc/sys/crypto/fips_enabled
+
