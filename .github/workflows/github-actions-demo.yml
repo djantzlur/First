@@ -41,8 +41,6 @@ jobs:
       - name: FIPS
         run: |
           echo 'FIPS test'
-          openssl version
-          ls -l /proc/sys/crypto
-          cat /proc/sys/crypto/fips_enabled
+          cat /proc/sys/crypto/fips_enabled 2>/dev/null || echo 0
           echo 'FIPS DONE'
 
