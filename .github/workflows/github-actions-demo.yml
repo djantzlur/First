@@ -19,7 +19,11 @@ jobs:
           df -h
 
       - name: Basic
-        run: echo "Hello from your self-hosted runner!"
+        run: |
+          echo "Hello from your self-hosted runner!"
+          python --version
+          node --version
+        
 
       - name: File
         run: |
@@ -35,5 +39,5 @@ jobs:
       - name: FIPS
         run: |
           echo 'FIPS test'
-          cat /proc/sys/crypto/fips_enabled
+          openssl version
 
