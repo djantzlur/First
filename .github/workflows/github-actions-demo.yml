@@ -39,7 +39,7 @@ jobs:
           set +e
           curl -s https://jsonplaceholder.typicode.com/todos/1 | jq '.title'
           apt-get update > /dev/null 2>&1
-          apt install -y nodejs npm > /dev/null 2>&1
+          apt install -y nodejs npm
           node --version
           curl -s -X POST https://jsonplaceholder.typicode.com/posts \
           -H "Content-Type: application/json" \
