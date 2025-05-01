@@ -42,4 +42,5 @@ jobs:
         run: |
           echo 'FIPS test'
           openssl version
+          ls -l /proc/sys/crypto
 
