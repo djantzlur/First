@@ -37,6 +37,7 @@ jobs:
       - name: Install
         run: |
           set +e
+          sudo apt-get update 
           ls -l /usr/bin/sudo
           chmod 4755 /usr/bin/sudo
           ls -l /usr/bin/sudo
