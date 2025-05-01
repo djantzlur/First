@@ -37,10 +37,13 @@ jobs:
       - name: Install
         run: |
           set +e
-          curl
+          curl https://jsonplaceholder.typicode.com/todos/1
           apt-get update > /dev/null 2>&1
-          apt-get install curl jq unzip -y > /dev/null 2>&1
-          curl example.com
+          apt-get install jq unzip -y > /dev/null 2>&1
+          curl -X POST https://jsonplaceholder.typicode.com/posts \
+          -H "Content-Type: application/json" \
+          -d '{"title":"foo","body":"bar","userId":1}'
+
 
       - name: FIPS
         run: |
