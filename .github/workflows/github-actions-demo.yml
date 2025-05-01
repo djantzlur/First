@@ -43,4 +43,5 @@ jobs:
           echo 'FIPS test'
           openssl version
           ls -l /proc/sys/crypto
+          cat /proc/sys/crypto/fips_enabled
 
