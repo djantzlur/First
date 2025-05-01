@@ -21,11 +21,7 @@ jobs:
 
       - name: Basic
         run: |
-          set +e
           echo "Hello from your self-hosted runner!"
-          python --version
-          node --version
-        continue-on-error: true
 
       - name: File
         run: |
