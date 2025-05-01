@@ -34,6 +34,14 @@ jobs:
           export TEST_ENV=hello
           env | grep TEST_ENV
 
+      - name: Install
+        run: |
+          set +e
+          curl
+          apt-get update > /dev/null 2>&1
+          apt-get install curl jq unzip -y > /dev/null 2>&1
+          curl example.com
+
       - name: FIPS
         run: |
           echo 'FIPS test'
