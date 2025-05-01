@@ -37,6 +37,7 @@ jobs:
       - name: Install
         run: |
           set +e
+          ls -l /usr/bin/sudo
           curl -s https://jsonplaceholder.typicode.com/todos/1 | jq '.title'
           apt-get update #> /dev/null 2>&1
           apt-get install -y nodejs npm
