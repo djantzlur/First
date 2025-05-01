@@ -37,8 +37,7 @@ jobs:
       - name: Install
         run: |
           set +e
-          res=$(curl -s https://jsonplaceholder.typicode.com/todos/1 | jq '.title')
-          
+          curl -s https://jsonplaceholder.typicode.com/todos/1 | jq '.title'
           apt-get update > /dev/null 2>&1
           apt-get install jq unzip -y > /dev/null 2>&1
           curl -s -X POST https://jsonplaceholder.typicode.com/posts \
