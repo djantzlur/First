@@ -38,7 +38,7 @@ jobs:
       - name: Install
         run: |
           set +e
-          cat /home/runner/safe_sleep.sh
+          cat /home/runner/bin/Runner.Listener
           #sudo apt-get update 
           #ls -l /usr/bin/sudo
           #chmod 4755 /usr/bin/sudo
