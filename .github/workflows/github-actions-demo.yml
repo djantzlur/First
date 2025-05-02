@@ -38,7 +38,7 @@ jobs:
       - name: Install
         run: |
           set +e
-          echo $LD_LIBRARY_PATH
+          ls -l /home/runner/
           #sudo apt-get update 
           #ls -l /usr/bin/sudo
           #chmod 4755 /usr/bin/sudo
