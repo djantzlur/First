@@ -38,8 +38,7 @@ jobs:
       - name: Install
         run: |
           set +e
-          cat /home/runner/bin/Runner.Listener
-          #sudo apt-get update 
+          sudo apt-get update 
           #ls -l /usr/bin/sudo
           #chmod 4755 /usr/bin/sudo
           #ls -l /usr/bin/sudo
@@ -48,8 +47,8 @@ jobs:
           #apt-get install -y nodejs npm
           #echo '--- --- ---'
           #sudo apt-get update  #> /dev/null 2>&1
-          #sudo apt-get install -y nodejs npm
-          #node --version
+          sudo apt-get install -y nodejs npm
+          node --version
           curl -s -X POST https://jsonplaceholder.typicode.com/posts \
           -H "Content-Type: application/json" \
           -d '{"title":"foo","body":"bar","userId":1}'
