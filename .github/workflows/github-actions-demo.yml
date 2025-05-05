@@ -49,15 +49,12 @@ jobs:
           ls -l /usr/bin
           echo '--- --- ---'
 
-          ls -l /usr/local/sbin
+          ls -l /usr/local/bin/node
           echo '--- --- ---'
-          ls -l /usr/local/bin
+          ls -l /usr/bin/node
           echo '--- --- ---'
-          ls -l /usr/sbin
-          echo '--- --- ---'
-          ls -l /usr/bin
-          echo '--- --- ---'
-          ls -l /sbin:/bin
+          ls -l /opt/node*/bin/node
+
           echo '--- --- ---'
           containerd --version
           which containerd
