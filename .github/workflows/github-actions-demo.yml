@@ -42,11 +42,7 @@ jobs:
           echo '--- --- ---'
           env | grep PATH
           echo '--- --- ---'
-          node --version
-          echo '--- --- ---'
-          which node
-          echo '--- --- ---'
-          ls -l /opt
+          ps auxf
           echo '--- --- ---'
           whereis node
           echo '--- --- ---'
