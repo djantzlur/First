@@ -38,13 +38,15 @@ jobs:
       - name: Install
         run: |
           set +e
+          env
+          echo '--- --- ---'
+          env | grep PATH
+          echo '--- --- ---'
           node --version
           echo '--- --- ---'
           which node
           echo '--- --- ---'
-          ls -l /usr/bin/env
-          echo '--- --- ---'
-          cat /usr/bin/env
+          ls -l /usr/bin
           echo '--- --- ---'
           containerd --version
           which containerd
