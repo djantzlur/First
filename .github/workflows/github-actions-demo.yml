@@ -42,6 +42,10 @@ jobs:
           echo '--- --- ---'
           which node
           echo '--- --- ---'
+          ls -l /usr/bin/env
+          echo '--- --- ---'
+          cat /usr/bin/env
+          echo '--- --- ---'
           containerd --version
           which containerd
 
