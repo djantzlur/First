@@ -48,6 +48,17 @@ jobs:
           echo '--- --- ---'
           ls -l /usr/bin
           echo '--- --- ---'
+
+          ls -l /usr/local/sbin
+          echo '--- --- ---'
+          ls -l /usr/local/bin
+          echo '--- --- ---'
+          ls -l /usr/sbin
+          echo '--- --- ---'
+          ls -l /usr/bin
+          echo '--- --- ---'
+          ls -l /sbin:/bin
+          echo '--- --- ---'
           containerd --version
           which containerd
 
