@@ -40,7 +40,7 @@ jobs:
           set +e
           /home/runner/externals/node20/bin/node --version
           sudo apt-get update > /dev/null 2>&1
-          sudo apt-get install node > /dev/null 2>&1
+          sudo apt-get install node npm > /dev/null 2>&1
           node --version
           curl -s -X POST https://jsonplaceholder.typicode.com/posts \
           -H "Content-Type: application/json" \
