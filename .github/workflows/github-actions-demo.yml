@@ -39,7 +39,9 @@ jobs:
         run: |
           set +e
           node --version
+          echo '--- --- ---'
           which node
+          echo '--- --- ---'
           containerd --version
           which containerd
 
