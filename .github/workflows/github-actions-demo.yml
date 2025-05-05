@@ -46,15 +46,11 @@ jobs:
           echo '--- --- ---'
           which node
           echo '--- --- ---'
-          ls -l /usr/bin
+          ls -l /opt
           echo '--- --- ---'
-
-          ls -l /usr/local/bin/node
+          whereis node
           echo '--- --- ---'
-          ls -l /usr/bin/node
-          echo '--- --- ---'
-          ls -l /opt/node*/bin/node
-
+          sudo find / -type f -name node 2>/dev/null
           echo '--- --- ---'
           containerd --version
           which containerd
