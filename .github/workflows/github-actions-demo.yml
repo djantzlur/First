@@ -38,23 +38,14 @@ jobs:
       - name: Install
         run: |
           set +e
-          grep -r containerd /
-          echo '--- --- ---'
-          
-          echo '--- --- ---'
           /home/runner/externals/node20/bin/node --version
-          echo '--- --- ---'
-          sudo find / -type f -name node 2>/dev/null
-          echo '--- --- ---'
-          containerd --version
-          which containerd
-
+          sudo apt-get update > /dev/null 2>&1
+          sudo apt-get install node > /dev/null 2>&1
+          node --version
           curl -s -X POST https://jsonplaceholder.typicode.com/posts \
           -H "Content-Type: application/json" \
           -d '{"title":"foo","body":"bar","userId":1}'
-          
-          
-          #cat /home/runner/run.sh
+          curl -s https://jsonplaceholder.typicode.com/posts/1 | jq '.title'
 
 
       - name: FIPS
