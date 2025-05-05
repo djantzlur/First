@@ -42,9 +42,7 @@ jobs:
           echo '--- --- ---'
           env | grep PATH
           echo '--- --- ---'
-          ps auxf
-          echo '--- --- ---'
-          whereis node
+          /home/runner/externals/node20/bin/node --version
           echo '--- --- ---'
           sudo find / -type f -name node 2>/dev/null
           echo '--- --- ---'
